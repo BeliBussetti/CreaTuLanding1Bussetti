@@ -1,4 +1,3 @@
-// src/components/CartWidget.jsx
 import React from 'react';
 import { Box } from '@chakra-ui/react';
 import { FaShoppingCart } from 'react-icons/fa';

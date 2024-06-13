@@ -1,4 +1,3 @@
-// src/components/NavBar.jsx
 import React from 'react';
 import { Box, Flex, Link, Spacer, Heading } from '@chakra-ui/react';
 import CartWidget from './CartWidget';
