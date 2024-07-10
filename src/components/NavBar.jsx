@@ -1,20 +1,20 @@
 import React from 'react';
-import { Box, Flex, Link as ChakraLink, Spacer, Heading } from '@chakra-ui/react';
-import { Link } from 'react-router-dom';
-import CartWidget from './CartWidget';
+import { Box, Flex, Text, Link } from '@chakra-ui/react';
 
-const NavBar = () => {
+const Navbar = () => {
   return (
-    <Flex as="nav" padding="1.5rem" background="blue.500" color="white">
-      <Heading size="md">Mi Tienda</Heading>
-      <Spacer />
-      <ChakraLink as={Link} to="/" margin="0 1rem">Home</ChakraLink>
-      <ChakraLink as={Link} to="/category/1" margin="0 1rem">Categoría 1</ChakraLink>
-      <ChakraLink as={Link} to="/category/2" margin="0 1rem">Categoría 2</ChakraLink>
-      <ChakraLink as={Link} to="/cart" margin="0 1rem">Carrito</ChakraLink>
-      <CartWidget />
-    </Flex>
+    <Box bg="blue.500" padding="1rem">
+      <Flex justifyContent="space-between" alignItems="center">
+        <Text fontSize="xl" color="white" fontWeight="bold">Mi Tienda</Text>
+        <Flex>
+          <Link href="/" color="white" marginRight="1rem">Home</Link>
+          <Link href="/categoria1" color="white" marginRight="1rem">Categoría 1: Remeras</Link>
+          <Link href="/categoria2" color="white" marginRight="1rem">Categoría 2: Buzos</Link>
+          <Link href="/carrito" color="white">Carrito</Link>
+        </Flex>
+      </Flex>
+    </Box>
   );
 };
 
-export default NavBar;
+export default Navbar;
